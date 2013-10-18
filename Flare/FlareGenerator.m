@@ -36,7 +36,40 @@
 -(void)processFiles{
     // If the m file has private imports
     
+    // Iterate files
+    for(NSURL *url in self.fileValues.allValues){
+        [self processFileAtURL:url];
+    }
     
+}
+
+
+-(void)processFileAtURL:(NSURL*)url{
+//    NSLog(@"Processing file %@", url.absoluteString);
+    NSError *error = nil;
+    NSString *sourceString = [NSString stringWithContentsOfURL:url
+                                                      encoding:NSUTF8StringEncoding
+                                                         error:&error];
+    if(error){
+        // TODO
+    }
+    
+    NSArray *lines = [sourceString componentsSeparatedByCharactersInSet: [NSCharacterSet newlineCharacterSet]];
+    
+    for(NSString *line in lines){
+        if([line hasPrefix:@"#import"]){
+//            NSLog(@"examinging line: %@", line);
+            //                output = [string substringFromIndex:1];
+            NSArray *chunks = [line componentsSeparatedByString: @"\""];
+            //NSLog(@"chunks: %@", chunks);
+            if(chunks.count > 1){
+                NSString *key = chunks[1];
+                NSLog(@"file %@ includes %@", url, key);
+            }
+        }
+    }
+    
+    //        NSString *relevantLine = [lines objectAtIndex:1000];
 }
 
 -(void)indexFilesAtURL:(NSURL*)url{
