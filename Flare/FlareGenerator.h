@@ -9,5 +9,5 @@
 #import <Foundation/Foundation.h>
 
 @interface FlareGenerator : NSObject
--(void)startAtURL:(NSURL*)url;
+-(void)scanDirectoriesUnder:(NSURL*)url processStartingFromFile:(NSURL*)file;
 @end

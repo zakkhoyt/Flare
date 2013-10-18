@@ -14,9 +14,9 @@ int main(int argc, const char * argv[])
 {
     @autoreleasepool {
         NSURL *root = [NSURL URLWithString:@"/Users/zakkhoyt/Code/repositories/vww/Theremin/Theremin"];
-        
+        NSURL *rootFile = [NSURL URLWithString:@"/Users/zakkhoyt/Code/repositories/vww/Theremin/Theremin/VWWAppDelegate.mm"];
         FlareGenerator *flare = [[FlareGenerator alloc]init];
-        [flare startAtURL:root];
+        [flare scanDirectoriesUnder:root processStartingFromFile:rootFile];
     }
     return 0;
 }

@@ -25,11 +25,11 @@
     return self;
 }
 
--(void)startAtURL:(NSURL*)url{
+-(void)scanDirectoriesUnder:(NSURL*)url processStartingFromFile:(NSURL*)file{
     [self indexFilesAtURL:url];
     NSLog(@"Finished indexing. Found %ld files: \n %@ %@", self.fileValues.count, self.fileValues.allKeys, self.fileValues.allValues);
     
-    [self processFiles];
+    [self processFilesStartingWith:file];
 }
 
 
@@ -43,10 +43,33 @@
     
 }
 
+-(void)processFilesStartingWith:(NSURL*)file{
+    NSError *error;
+    NSString *sourceString = [NSString stringWithContentsOfURL:file
+                                                      encoding:NSUTF8StringEncoding
+                                                         error:&error];
+    if(error){
+        // TODO
+    }
+    
+    NSArray *lines = [sourceString componentsSeparatedByCharactersInSet: [NSCharacterSet newlineCharacterSet]];
+    
+    for(NSString *line in lines){
+        if([line hasPrefix:@"#import"] ||
+           [line hasPrefix:@"#include"]){
+            NSArray *chunks = [line componentsSeparatedByString: @"\""];
+            if(chunks.count > 1){
+                NSString *key = chunks[1];
+                NSLog(@"file %@ includes %@", file, key);
+            }
+        }
+    }
+    
+}
 
 -(void)processFileAtURL:(NSURL*)url{
 //    NSLog(@"Processing file %@", url.absoluteString);
-    NSError *error = nil;
+    NSError *error;
     NSString *sourceString = [NSString stringWithContentsOfURL:url
                                                       encoding:NSUTF8StringEncoding
                                                          error:&error];
@@ -57,19 +80,15 @@
     NSArray *lines = [sourceString componentsSeparatedByCharactersInSet: [NSCharacterSet newlineCharacterSet]];
     
     for(NSString *line in lines){
-        if([line hasPrefix:@"#import"]){
-//            NSLog(@"examinging line: %@", line);
-            //                output = [string substringFromIndex:1];
+        if([line hasPrefix:@"#import"] ||
+           [line hasPrefix:@"#include"]){
             NSArray *chunks = [line componentsSeparatedByString: @"\""];
-            //NSLog(@"chunks: %@", chunks);
             if(chunks.count > 1){
                 NSString *key = chunks[1];
                 NSLog(@"file %@ includes %@", url, key);
             }
         }
     }
-    
-    //        NSString *relevantLine = [lines objectAtIndex:1000];
 }
 
 -(void)indexFilesAtURL:(NSURL*)url{
