@@ -16,8 +16,8 @@ int main(int argc, const char * argv[])
         NSURL *root = [NSURL URLWithString:@"/Users/zakkhoyt/Code/repositories/vww/Theremin/Theremin"];
         NSURL *rootFile = [NSURL URLWithString:@"/Users/zakkhoyt/Code/repositories/vww/Theremin/Theremin/VWWAppDelegate.mm"];
         FlareGenerator *flare = [[FlareGenerator alloc]init];
-//        [flare scanDirectoriesUnder:root processStartingFromFile:rootFile];
-        [flare test];
+        [flare scanDirectoriesUnder:root processStartingFromFile:rootFile];
+//        [flare test];
     }
     return 0;
 }
