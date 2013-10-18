@@ -10,6 +10,7 @@
 		C67B9BF61810DF4600F006FF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C67B9BF51810DF4600F006FF /* Foundation.framework */; };
 		C67B9BF91810DF4600F006FF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C67B9BF81810DF4600F006FF /* main.m */; };
 		C67B9BFD1810DF4600F006FF /* Flare.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = C67B9BFC1810DF4600F006FF /* Flare.1 */; };
+		C67B9C051810DF6F00F006FF /* FlareGenerator.m in Sources */ = {isa = PBXBuildFile; fileRef = C67B9C041810DF6F00F006FF /* FlareGenerator.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -31,6 +32,8 @@
 		C67B9BF81810DF4600F006FF /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		C67B9BFB1810DF4600F006FF /* Flare-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Flare-Prefix.pch"; sourceTree = "<group>"; };
 		C67B9BFC1810DF4600F006FF /* Flare.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = Flare.1; sourceTree = "<group>"; };
+		C67B9C031810DF6F00F006FF /* FlareGenerator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FlareGenerator.h; sourceTree = "<group>"; };
+		C67B9C041810DF6F00F006FF /* FlareGenerator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FlareGenerator.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,6 +79,8 @@
 				C67B9BF81810DF4600F006FF /* main.m */,
 				C67B9BFC1810DF4600F006FF /* Flare.1 */,
 				C67B9BFA1810DF4600F006FF /* Supporting Files */,
+				C67B9C031810DF6F00F006FF /* FlareGenerator.h */,
+				C67B9C041810DF6F00F006FF /* FlareGenerator.m */,
 			);
 			path = Flare;
 			sourceTree = "<group>";
@@ -139,6 +144,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C67B9C051810DF6F00F006FF /* FlareGenerator.m in Sources */,
 				C67B9BF91810DF4600F006FF /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

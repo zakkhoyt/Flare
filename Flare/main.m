@@ -7,15 +7,16 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "FlareGenerator.h"
+
 
 int main(int argc, const char * argv[])
 {
-
     @autoreleasepool {
+        NSURL *root = [NSURL URLWithString:@"/Users/zakkhoyt/Code/repositories/vww/Theremin/Theremin"];
         
-        // insert code here...
-        NSLog(@"Hello, World!");
-        
+        FlareGenerator *flare = [[FlareGenerator alloc]init];
+        [flare startAtURL:root];
     }
     return 0;
 }
