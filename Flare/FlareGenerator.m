@@ -8,9 +8,13 @@
 
 #import "FlareGenerator.h"
 
+static NSString *kNameKey = @"name";
+static NSString *kSizeKey = @"size";
+static NSString *kChildrenKey = @"children";
 @interface FlareGenerator ()
 @property (strong) NSFileManager *fileManager;
 @property (strong) NSMutableDictionary *fileValues;
+@property (strong) NSMutableDictionary *flare;
 @end
 
 
@@ -21,8 +25,44 @@
     if(self){
         _fileManager = [[NSFileManager alloc] init];
         _fileValues = [@{}mutableCopy];
+        _flare = [@{}mutableCopy];
     }
     return self;
+}
+
+-(void)test{
+    
+    NSMutableDictionary *child1 = [@{}mutableCopy];
+    [child1 setObject:@"child1" forKey:kNameKey];
+    [child1 setObject:@(2) forKey:kSizeKey];
+    
+    NSMutableDictionary *child2 = [@{}mutableCopy];
+    [child2 setObject:@"child2" forKey:kNameKey];
+    [child2 setObject:@(22) forKey:kSizeKey];
+    
+//    NSMutableDictionary *root = [@{}mutableCopy];
+//    [root setObject:@"root" forKey:kNameKey];
+//    [child1 setObject:@(2) forKey:kSizeKey];
+    
+    NSArray *children = @[child1, child2];
+    [self.flare setObject:@"root" forKey:kNameKey];
+    [self.flare setObject:children forKey:kChildrenKey];
+    
+    NSError *error;
+    NSData *jsonData = [NSJSONSerialization dataWithJSONObject:self.flare
+                                                       options:NSJSONWritingPrettyPrinted // Pass 0 if you don't care about the readability of the generated string
+                                                         error:&error];
+    
+    if (! jsonData) {
+        NSLog(@"Got an error: %@", error);
+    } else {
+        NSString *jsonString = [[NSString alloc] initWithData:jsonData encoding:NSUTF8StringEncoding];
+        NSLog(@"json string; %@", jsonString);
+        NSLog(@"");
+    }
+    
+    
+    
 }
 
 -(void)scanDirectoriesUnder:(NSURL*)url processStartingFromFile:(NSURL*)file{

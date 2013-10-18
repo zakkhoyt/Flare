@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Flare/FlareGenerator.m"
-            timestampString = "403763096.570582"
+            timestampString = "403764536.173652"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "111"
-            endingLineNumber = "111"
+            startingLineNumber = "151"
+            endingLineNumber = "151"
             landmarkName = "-indexFilesAtURL:"
             landmarkType = "5">
          </BreakpointContent>
@@ -26,11 +26,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Flare/FlareGenerator.m"
-            timestampString = "403761987.1704"
+            timestampString = "403764536.173652"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "30"
-            endingLineNumber = "30"
+            startingLineNumber = "70"
+            endingLineNumber = "70"
             landmarkName = "-scanDirectoriesUnder:processStartingFromFile:"
             landmarkType = "5">
          </BreakpointContent>
@@ -42,11 +42,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Flare/FlareGenerator.m"
-            timestampString = "403763096.570582"
+            timestampString = "403764536.173652"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "133"
-            endingLineNumber = "133"
+            startingLineNumber = "173"
+            endingLineNumber = "173"
             landmarkName = "-indexFilesAtURL:"
             landmarkType = "5">
          </BreakpointContent>
@@ -58,11 +58,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Flare/FlareGenerator.m"
-            timestampString = "403763096.570582"
+            timestampString = "403764536.173652"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "86"
-            endingLineNumber = "86"
+            startingLineNumber = "126"
+            endingLineNumber = "126"
             landmarkName = "-processFileAtURL:"
             landmarkType = "5">
          </BreakpointContent>
@@ -74,11 +74,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Flare/FlareGenerator.m"
-            timestampString = "403763096.570582"
+            timestampString = "403764536.173652"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "82"
-            endingLineNumber = "82"
+            startingLineNumber = "122"
+            endingLineNumber = "122"
             landmarkName = "-processFileAtURL:"
             landmarkType = "5">
             <Locations>
@@ -120,11 +120,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Flare/FlareGenerator.m"
-            timestampString = "403763096.570582"
+            timestampString = "403764536.173652"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "85"
-            endingLineNumber = "85"
+            startingLineNumber = "125"
+            endingLineNumber = "125"
             landmarkName = "-processFileAtURL:"
             landmarkType = "5">
          </BreakpointContent>
@@ -136,13 +136,29 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Flare/FlareGenerator.m"
-            timestampString = "403763107.094327"
+            timestampString = "403764536.173652"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "48"
-            endingLineNumber = "48"
+            startingLineNumber = "88"
+            endingLineNumber = "88"
             landmarkName = "-processFilesStartingWith:"
             landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Flare/Flare.h"
+            timestampString = "403763856.841246"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "15"
+            endingLineNumber = "15"
+            landmarkName = "@interface Flare"
+            landmarkType = "2">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

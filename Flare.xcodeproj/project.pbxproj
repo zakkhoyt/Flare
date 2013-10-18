@@ -34,6 +34,8 @@
 		C67B9BFC1810DF4600F006FF /* Flare.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = Flare.1; sourceTree = "<group>"; };
 		C67B9C031810DF6F00F006FF /* FlareGenerator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FlareGenerator.h; sourceTree = "<group>"; };
 		C67B9C041810DF6F00F006FF /* FlareGenerator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FlareGenerator.m; sourceTree = "<group>"; };
+		C67B9C071810F1D800F006FF /* flare.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = flare.json; sourceTree = "<group>"; };
+		C67B9C0B1810F4AB00F006FF /* test00.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = test00.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,6 +78,7 @@
 		C67B9BF71810DF4600F006FF /* Flare */ = {
 			isa = PBXGroup;
 			children = (
+				C67B9C061810F1D800F006FF /* Samples */,
 				C67B9BF81810DF4600F006FF /* main.m */,
 				C67B9BFC1810DF4600F006FF /* Flare.1 */,
 				C67B9BFA1810DF4600F006FF /* Supporting Files */,
@@ -91,6 +94,15 @@
 				C67B9BFB1810DF4600F006FF /* Flare-Prefix.pch */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		C67B9C061810F1D800F006FF /* Samples */ = {
+			isa = PBXGroup;
+			children = (
+				C67B9C071810F1D800F006FF /* flare.json */,
+				C67B9C0B1810F4AB00F006FF /* test00.json */,
+			);
+			path = Samples;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

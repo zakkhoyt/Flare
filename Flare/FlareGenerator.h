@@ -10,4 +10,5 @@
 
 @interface FlareGenerator : NSObject
 -(void)scanDirectoriesUnder:(NSURL*)url processStartingFromFile:(NSURL*)file;
+-(void)test;
 @end
